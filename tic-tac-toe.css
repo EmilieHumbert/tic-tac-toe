@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1;
+  margin: 2rem;
+  color: darkslategrey;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  margin: 5rem 2rem 2rem;
+}
+
+@media (min-width: 40rem){
+  .container{
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+/* left side */
+.players {
+  color: gray;
+}
+
+.player {
+  margin-bottom: 1rem;
+}
+
+.player-detail {
+  margin: 0;
+}
+
+.player-name {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: darkslategrey;
+}
+
+/* buttons */
+.btn {
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 1rem;
+  background-color: white;
+  border: 1px solid grey;
+  color: grey;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-reset {
+  display: block;
+  border-color: darkred;
+  color: darkred;
+  min-width: 7.813rem;
+}
+
+.btn-name {
+  display: block;
+  min-width: 7.813rem;
+}
+
+/* board side - right side */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0.25rem;
+  justify-items: stretch;
+  align-items: stretch;
+  width: 100%;
+  max-width: calc(100vh - 12rem);
+  margin: auto;
+  background-color: #ccc;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+  color: grey;
+  background-color: white;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 6.25rem; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 1.25rem;
+  border: 0.0625rem solid #888;
+  width: 80%;
+  font-size: 1.3rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: darkslategrey;
+}
+
+.form-name {
+  color: gray;
+}
+
+.input-player {
+  line-height: 1.5rem;
+  margin-left: 0.5rem;
+  color: rgb(124, 116, 116);
+  padding-left: 1rem;
+}
+
+.input-player-first {
+  margin-left: 2.375rem;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-cancel-names {
+  min-width: 5.313rem;
+  margin-right: 1rem;
+  border-color: darkred;
+  color: darkred;
+}
+
+.btn-save-names {
+  min-width: 5.313rem;
+  color: darkslategrey;
+}
+
+/* The Close Button */
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
